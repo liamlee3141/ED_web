@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 const Footer: React.FC = () => {
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
@@ -11,7 +13,7 @@ const Footer: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
