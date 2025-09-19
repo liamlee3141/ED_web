@@ -1,0 +1,248 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight, Award, Users, Clock, CheckCircle } from 'lucide-react';
+
+const Home: React.FC = () => {
+  const stats = [
+    { number: '150+', label: 'Projects Completed' },
+    { number: '12', label: 'Years Experience' },
+    { number: '98%', label: 'Client Satisfaction' },
+    { number: '25+', label: 'Design Awards' },
+  ];
+
+  const services = [
+    {
+      title: 'Interior Design',
+      description: 'Sophisticated interior spaces that reflect your unique style and enhance daily living.',
+      image: '/images/modern_minimalist_living_room_natural_light_contemporary.jpg'
+    },
+    {
+      title: 'Architectural Planning',
+      description: 'Comprehensive architectural solutions from concept to completion.',
+      image: '/images/contemporary_modern_residential_exterior_clean_lines.jpg'
+    },
+    {
+      title: 'Commercial Design',
+      description: 'Professional commercial spaces that inspire productivity and success.',
+      image: '/images/modern_corporate_meeting_room_minimalist_design_wood_glass.jpg'
+    }
+  ];
+
+  const testimonials = [
+    {
+      name: 'Sarah Johnson',
+      role: 'Homeowner',
+      content: 'Elegance Design transformed our home into a masterpiece. Their attention to detail and minimalist approach exceeded our expectations.',
+      rating: 5
+    },
+    {
+      name: 'Michael Chen',
+      role: 'CEO, Tech Startup',
+      content: 'The team created a modern office space that perfectly reflects our company culture. Professional, efficient, and absolutely stunning.',
+      rating: 5
+    },
+    {
+      name: 'Emma Davis',
+      role: 'Restaurant Owner',
+      content: 'Our restaurant design has become a destination in itself. The elegant atmosphere has significantly enhanced our customer experience.',
+      rating: 5
+    }
+  ];
+
+  return (
+    <div className="min-h-screen">
+      {/* Hero Section */}
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/images/modern_minimalist_living_room_white_walls_natural_light.jpg"
+            alt="Modern minimalist interior"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-black/30"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-6 leading-tight">
+            Elegance in
+            <span className="block font-normal">Every Detail</span>
+          </h1>
+          <p className="text-xl md:text-2xl font-light mb-8 max-w-2xl mx-auto opacity-90">
+            Creating sophisticated spaces through minimalist design and 
+            meticulous craftsmanship.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/portfolio"
+              className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-light hover:bg-gray-100 transition-colors group"
+            >
+              View Our Work
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              to="/contact"
+              className="inline-flex items-center px-8 py-4 border border-white text-white font-light hover:bg-white hover:text-gray-900 transition-colors"
+            >
+              Start Your Project
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center">
+                <div className="text-3xl md:text-4xl font-light text-gray-900 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-gray-600 font-light">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-6">
+                Crafting Spaces That
+                <span className="block font-normal">Inspire</span>
+              </h2>
+              <p className="text-lg text-gray-600 font-light mb-6 leading-relaxed">
+                With over a decade of experience in luxury design, we specialize in creating 
+                environments that seamlessly blend aesthetic beauty with functional excellence. 
+                Our minimalist approach emphasizes clean lines, natural materials, and 
+                thoughtful spatial relationships.
+              </p>
+              <div className="space-y-4 mb-8">
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-gray-900" />
+                  <span className="text-gray-700 font-light">Award-winning design expertise</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-gray-900" />
+                  <span className="text-gray-700 font-light">Sustainable and eco-friendly solutions</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <CheckCircle className="h-5 w-5 text-gray-900" />
+                  <span className="text-gray-700 font-light">Full-service project management</span>
+                </div>
+              </div>
+              <Link
+                to="/about"
+                className="inline-flex items-center text-gray-900 font-light hover:text-gray-700 group"
+              >
+                Learn More About Us
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+            <div className="relative">
+              <img
+                src="/images/serene_contemporary_neutral_luxury_bedroom_interior.jpg"
+                alt="Elegant bedroom design"
+                className="w-full h-96 object-cover rounded-sm"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Preview */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-lg text-gray-600 font-light max-w-2xl mx-auto">
+              From intimate residential spaces to grand commercial projects, 
+              we deliver exceptional design solutions tailored to your vision.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div key={index} className="group">
+                <div className="relative overflow-hidden rounded-sm mb-6">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <h3 className="text-xl font-light text-gray-900 mb-3">{service.title}</h3>
+                <p className="text-gray-600 font-light">{service.description}</p>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <Link
+              to="/services"
+              className="inline-flex items-center px-8 py-4 bg-gray-900 text-white font-light hover:bg-gray-800 transition-colors group"
+            >
+              View All Services
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4">
+              Client Testimonials
+            </h2>
+            <p className="text-lg text-gray-600 font-light">
+              What our clients say about working with us.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-sm border border-gray-100">
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <span key={i} className="text-yellow-400 text-lg">★</span>
+                  ))}
+                </div>
+                <p className="text-gray-700 font-light mb-6 italic">
+                  "{testimonial.content}"
+                </p>
+                <div>
+                  <div className="font-normal text-gray-900">{testimonial.name}</div>
+                  <div className="text-gray-600 font-light text-sm">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gray-900 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl md:text-4xl font-light mb-6">
+            Ready to Transform Your Space?
+          </h2>
+          <p className="text-xl font-light mb-8 opacity-90">
+            Let's discuss your vision and create something extraordinary together.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-flex items-center px-8 py-4 bg-white text-gray-900 font-light hover:bg-gray-100 transition-colors group"
+          >
+            Get Started Today
+            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+          </Link>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Home;
