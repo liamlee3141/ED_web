@@ -4,6 +4,8 @@ import { supabase } from '../lib/supabase';
 import type { ContactFormData } from '../types';
 import { motion } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 interface FormErrors {
   [key: string]: string;
 }
