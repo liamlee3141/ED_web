@@ -3,6 +3,8 @@ import { Home, Building, Palette, Settings, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 const Services: React.FC = () => {
   const services = [
     {
