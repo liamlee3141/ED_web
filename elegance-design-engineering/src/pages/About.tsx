@@ -2,6 +2,8 @@ import React from 'react';
 import { Award, Users, Globe, Heart } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 const About: React.FC = () => {
   const team = [
     {
@@ -72,7 +74,7 @@ const About: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
