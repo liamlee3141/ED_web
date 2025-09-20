@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { ExternalLink, MapPin, Calendar } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 const Portfolio: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('全部');
 
@@ -101,7 +103,7 @@ const Portfolio: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -121,7 +123,7 @@ const Portfolio: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -133,7 +135,7 @@ const Portfolio: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
