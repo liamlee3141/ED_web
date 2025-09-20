@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Award, Users, Clock, CheckCircle } from 'lucide-react';
 import { motion, useInView, useAnimation } from 'framer-motion';
 
+import { easeOut } from "framer-motion";
+
 const Home: React.FC = () => {
   // Background image carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
