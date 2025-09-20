@@ -85,7 +85,7 @@ const Home: React.FC = () => {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -105,7 +105,7 @@ const Home: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.6,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -117,7 +117,7 @@ const Home: React.FC = () => {
       opacity: 1,
       transition: {
         duration: 0.8,
-        ease: "easeOut"
+        ease: easeOut
       }
     }
   };
@@ -151,7 +151,7 @@ const Home: React.FC = () => {
               }}
               transition={{ 
                 duration: index === 0 ? 2 : 1.5, 
-                ease: "easeOut" 
+                ease: easeOut 
               }}
             />
           ))}
@@ -163,7 +163,7 @@ const Home: React.FC = () => {
             className="text-5xl md:text-7xl font-light mb-6 leading-tight tracking-tight"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.5, ease: easeOut }}
           >
             <span className="block font-extralight">雅致设计</span>
             <span className="block text-3xl md:text-4xl mt-4 opacity-90 font-light tracking-wide">创造非凡空间</span>
@@ -173,7 +173,7 @@ const Home: React.FC = () => {
             className="text-xl md:text-2xl font-light mb-12 opacity-90 max-w-2xl mx-auto leading-relaxed tracking-wide"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8, ease: "easeOut" }}
+            transition={{ duration: 1, delay: 0.8, ease: easeOut }}
           >
             我们专注于打造既美观又实用的设计空间，
             将您的生活理念转化为现实的艺术作品。
@@ -183,7 +183,7 @@ const Home: React.FC = () => {
             className="flex flex-col sm:flex-row gap-4 justify-center"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+            transition={{ duration: 0.8, delay: 1.2, ease: easeOut }}
           >
             <Link
               to="/portfolio"
